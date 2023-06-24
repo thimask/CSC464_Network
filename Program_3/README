@@ -1,0 +1,23 @@
+
+
+This progam transfers file from Client to Server using Selective repeat UDP with poll library inducted
+
+there is a multiclient server
+As client connects to server; it creates a Forked process
+Main server goes to recv again on the socket as given
+and child process, closes main socket. and then get a random port between 41000 to 42000
+
+Server tries to open a file in write mode
+if ok"sends ok " else NAK
+
+Client reads chunks of data from file and adds in window
+if ok. then sends the file to the server
+
+As file is completed. It acknowlege the server..
+
+Server on other hand, 
+If packet seq number is same as window lower, it will accept the packet and slide window
+If it goes to recv packet for 10 times with a poll wait of 1 second. it will exit child process
+
+I have used malloc; because its faster to use 
+
