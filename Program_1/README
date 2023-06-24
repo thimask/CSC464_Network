@@ -1,0 +1,18 @@
+README
+Lab time: Noon
+to run the code; ./trace pcapfile | tee log.txt
+there are 10 given test these are completed 
+1: ARP DONE
+2: UDP DOne
+3: Ping DONE
+4: small tcp: DONE
+5:Http : DONE
+6:IP bad checksum: DONE
+7: largemix: DONE
+8:largemix2: DONE
+9: mix with poptio: DONE
+10: tcp with bad checksum: DONE
+and two additional pcap files
+1:one with ping to loopback address (localPing.pcap)
+2: webbrowser fetch (google.pcap)
+these are all running fine
